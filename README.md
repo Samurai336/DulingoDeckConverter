@@ -1,3 +1,6 @@
+# Dulingo Deck Converter
+Turns the Deck.csv file from duolingo into something sane. 
+
 ## Setup 
 
 ### Node installation
