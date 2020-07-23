@@ -1,6 +1,7 @@
 const express = require('express'); 
 const bodyParser = require('body-parser'); 
 const swaggerUi = require('swagger-ui-express');
+const cors = require('cors');
 
 const routes = require('./routes.js');
 const clients = require('./clients/clientMap.js');
@@ -9,6 +10,9 @@ const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./src/swagger.yaml'); //this yaml load is looking one directory up for some reason.
 const config = require('../configuration/config.json');
 const app = express(); 
+
+// need this for doing the file stuff over the web. 
+app.use(cors());
 
 // Off the shelf Middleware for express. 
 // parses incoming JSON. 
