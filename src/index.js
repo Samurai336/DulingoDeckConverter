@@ -6,8 +6,8 @@ const routes = require('./routes.js');
 const clients = require('./clients/clientMap.js');
 const fileUpload = require('express-fileupload');
 const YAML = require('yamljs');
-const swaggerDocument = YAML.load('./swagger.yaml');
-const config = require('./config.json');
+const swaggerDocument = YAML.load('./src/swagger.yaml'); //this yaml load is looking one directory up for some reason.
+const config = require('../configuration/config.json');
 const app = express(); 
 
 // Off the shelf Middleware for express. 

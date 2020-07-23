@@ -5,13 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch",
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
+            "program": "${workspaceRoot}/src/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+              "--nolazy"
             ],
-            "program": "${workspaceFolder}/index.js"
-        }
+            "sourceMaps": false,
+          }
     ]
 }
