@@ -41,3 +41,5 @@ app.listen (config.port, () => {
     console.log(`hello there, I am listening on ${app.selfUrl}`);
     console.log(`swagger page available at ${app.selfUrl}/swagger`);
 }); 
+
+app.get("/",(req,res) => res.status(200).json({})); 
